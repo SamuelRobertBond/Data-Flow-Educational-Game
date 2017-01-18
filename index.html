@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+	.button{
+		cursor: pointer;
+		font color: white; 
+		width: 99%;
+		height: 25%;
+		background-color: MediumSpringGreen;
+	}
+	html, body{
+		width: 99%;
+		height: 98%;
+		background-color: OldLace;
+	}
+	article{
+		width: 80%;
+		height: 70%;
+		margin-left: 20%;
+		border: 1px solid black;
+	}
+	canvas{
+		height: 100%;
+		width: height;
+		margin-left: 17%;
+	}
+	.tools{
+		width: 20%;
+		height: 70%;
+		margin: 0;
+		border: 1px solid black;
+		float: left;
+	}
+	.outputBox{
+		width: 25%;
+		height: 30%;
+		float: left;
+		border: 1px solid black;
+	}
+	.modifierMenu{
+		width: 54%;
+		height: 30%;
+		border: 1px solid black;
+		float: left;
+	}
+	.flowButtonFrame{
+		width: 21%;
+		height: 30%;
+		border: 1px solid black;
+		margin-left: 79.5%;
+	}
+	.flowButton{
+		width: 99%;
+		height: 99%;
+		font-size: 200%;
+		font-style: bold;
+		background-color: teal;
+	}
+	.modifierText{
+		width: 20%;
+		color: black;
+		font-weight: bold;
+		margin-right: 10%;
+	}
+	.dropdown{
+		position: left;
+		display: inline-block;
+		width: 90%;
+	}
+	.dropdownFrame{
+		padding-top: 2%;
+		padding-left: 30%;
+		padding-right: 10%; 
+		height: 100%;
+	}
+	select{
+		color: black;
+	}
+	.modifierButton{
+		width: 100%;
+		color: "Blue";
+	}
+	.show{
+		display: inline;
+	}
+	.textField{
+		width: 98%;
+		height: 97%;
+		resize: none;
+		outline: none;
+		display: center;
+		color: green; 
+		background-color: black;
+
+	}
+	table{
+		width: 95%%;
+		height: 20%;
+	}
+	th{
+		color: black;
+		text-align: center;
+		font-weight: bold;
+	}
+	tr{
+		text-align: center;
+		font-weight: bold;
+	}
+	td{
+		align-content: right;
+	}
+	</style>
+
+</head>
+
+<body>
+	<div class = "tools" id = "tools">
+			<button class = "button" id = "pointerbutton">Selector</button>
+			<button class = "button" id = "eraserbutton">Eraser</button>
+			<button class = "button" id = "defaultpipebutton">Straight Pipe</button>
+			<button class = "button" id = "cornerpipebutton">Elbow Pipe</button>
+	</div>
+	<article>
+		<canvas id = "canvas" width="500" height="500"></canvas>
+			<script src = scripts/Grid/PuzzleHandler.js></script>
+			<script src = "scripts/Grid/ModifierMenu.js"></script>
+			<script src = "scripts/Grid/Modifier.js"></script>
+			<script src = "scripts/Grid/PuzzleProcessor.js"></script>
+			<script src = "scripts/Grid/pipes.js"></script>
+			<script src = "scripts/Grid/tile.js"></script>
+			<script src = "scripts/Grid/tools.js"></script>
+			<script src = "scripts/Grid/gridcontroller.js"></script>
+			<script src = "scripts/Grid/main.js" id = "gridScript"></script>
+			
+	</article>
+
+	<div class = "outputBox">
+		<textarea readonly class = "textField" id = "out">> Puzzle Loaded</textarea>
+	</div>
+
+	<div class = "modifierMenu" id = "modifierMenu">
+		<div class = "dropdownFrame">
+			<table>
+				<tr>
+					<th>Modifier</th>
+					<th>Condition</th>
+					<th>Function</th>
+					<th><script>window.puzzleID</script></th>
+				</tr>
+				<tr>
+					<td>
+						<select name = "Modifiers" id = "modifiers">
+							<option value = "None">None</option>
+							<option value = "IF">IF</option>
+							<option value = "Function">Function</option>
+						</select>
+					</td>
+					<td>
+						<select name = "Conditions" id = "conditions"></select>
+					</td>
+					<td>
+						<select name = "Functions" id = "functions"></select>
+					</td>
+					<td>
+						<button id = "modifierButton" class = "modifierButton">Add Mod</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class = "flowButtonFrame" id = "flowbutton">
+		<button class = "flowButton" id = "flowbutton">Flow</button>
+	</div>
+</body>
+</html>
