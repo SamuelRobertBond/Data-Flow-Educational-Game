@@ -29,7 +29,7 @@ var enablePuzzleGlossary = false;
 function puzzleSelectBox(){
 	puzzleIndex = prompt("Please input a puzzle that you would like to attempt (1 through 6)");
 
-	if(puzzleIndex != null){
+	if(puzzleIndex != null && puzzleIndex > 0 && puzzleIndex < 7){
 		grid = new GridController(0, 0, canvas.width, canvas.height, 6, puzzleIndex - 1);
 	}else{
 		puzzleSelectBox();
