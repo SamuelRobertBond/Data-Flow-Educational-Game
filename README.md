@@ -4,3 +4,5 @@ This was a class project I did for my software security and engineering course a
 This was my first HTML / CSS / JavaScript project so it is a little rough around the edges, but I do think that I did a decent job. The Game itself is about moving "flow" from an input pipe to an output pipe. Flow is represented by different colors. The player has to modify and sort through the flow in order to output the correct color of flow. The player accomplishes this by applying "modifiers" to tiles. Modifiers are used to represent logical constructs that are used in computer science. To accomplish the puzzler the player needs to use these constructs in order to modify the flow to meet the expected output. 
 
 This idea was inspired by the game TIS-100, which has the user program in a proprietary language, where the goal is to modify input to meet an expected output. I tried to take that concept and make it less challenging and more user friendly.
+
+Original Project was on a bitbucket repo that is private. I need to get in touch with the team member who controls it. If I can make it public, I will link it. If you have any questions please email me at bonds3@go.stockton.edu.
