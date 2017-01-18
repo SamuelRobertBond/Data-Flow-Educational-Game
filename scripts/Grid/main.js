@@ -10,7 +10,7 @@ canvas.height = bRect.bottom - bRect.top;
 
 var puzzles = null;
 
-var puzzleIndex =2;
+var puzzleIndex = 2;
 
 if(puzzleIndex == 0){
 	puzzles = [0, 1];
@@ -26,7 +26,15 @@ var enableGrid = false;
 var enablePuzzleIntro = true;
 var enablePuzzleGlossary = false;
 
-var grid = null;
+function puzzleSelectBox(){
+	puzzleIndex = prompt("Please input a puzzle that you would like to attempt (1 through 6)");
+
+	if(puzzleIndex != null){
+		grid = new GridController(0, 0, canvas.width, canvas.height, 6, puzzleIndex - 1);
+	}else{
+		puzzleSelectBox();
+	}
+}
 
 //Draws the grid
 function render(){
@@ -51,5 +59,5 @@ function changePuzzle(){
 setInterval(changePuzzle, 250);
 
 document.addEventListener("DOMContentLoaded", function(e){
-	grid = new GridController(0, 0, canvas.width, canvas.height, 6, puzzles[index]);
+	puzzleSelectBox();
 });
